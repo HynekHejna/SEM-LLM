@@ -169,3 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# model folders
+robe-error-detector/
+robe-mask-corrector/

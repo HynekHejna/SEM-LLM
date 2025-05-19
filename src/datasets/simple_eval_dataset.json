@@ -1,0 +1,20 @@
+[
+    {
+        "sentence":"Kluci byly včera večer v kině",
+        "correct_mask":"byly",
+        "correct_fill":"byli",
+        "correct_sentence":"Kluci byli včera večer v kině"
+    },
+    {
+        "sentence":"Děti seděli na lavičce a pily čaj",
+        "correct_mask":"seděli",
+        "correct_fill":"seděly",
+        "correct_sentence":"Děti seděly na lavičce a pily čaj"
+    },
+    {
+        "sentence":"Holky si hrály na hřišti",
+        "correct_mask": "None",
+        "correct_fill":"None",
+        "correct_sentence":"Holky si hrály na hřišti"
+    }
+]

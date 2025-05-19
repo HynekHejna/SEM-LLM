@@ -1,0 +1,100 @@
+{"tokens": ["Sousedky", "vařili", "večeři."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Včera", "sme", "byli", "v", "kině."], "labels": ["O", "ERR", "O", "O", "O"]}
+{"tokens": ["Sousedky", "vařili", "večeři."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Děti", "běhaly", "po", "zahradě."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Učitelé", "odešly", "z", "třídy."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Děti", "pily", "čaj."], "labels": ["O", "O", "O"]}
+{"tokens": ["Holky", "utekly", "domu."], "labels": ["O", "O", "ERR"]}
+{"tokens": ["Včera", "sme", "byli", "v", "kině."], "labels": ["O", "ERR", "O", "O", "O"]}
+{"tokens": ["Holky", "skákali", "přes", "švihadlo."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Kamarádky", "nakoupily", "v", "obchodě."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Sousedky", "vařily", "večeři."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Chlapci", "běhaly", "po", "parku."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Sousedky", "vařily", "večeři."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Učitelé", "odešly", "z", "třídy."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Děti", "si", "hráli", "na", "hřišti."], "labels": ["O", "O", "ERR", "O", "O"]}
+{"tokens": ["Bratři", "přinesly", "nákup."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Bratři", "se", "vrátily", "domů."], "labels": ["O", "O", "ERR", "O"]}
+{"tokens": ["Dívky", "čistily", "stoly."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Sousedky", "vařily", "večeři."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Děti", "pily", "čaj."], "labels": ["O", "O", "O"]}
+{"tokens": ["Kluci", "přišli", "domů."], "labels": ["O", "O", "O"]}
+{"tokens": ["Bratři", "přinesli", "nákup."], "labels": ["O", "O", "O"]}
+{"tokens": ["Bratři", "přinesli", "nákup."], "labels": ["O", "O", "O"]}
+{"tokens": ["Děti", "malovaly", "obrázky."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Děti", "běhaly", "po", "zahradě."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Dívky", "čistili", "stoly."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Děti", "pily", "čaj."], "labels": ["O", "O", "O"]}
+{"tokens": ["Děti", "pily", "čaj."], "labels": ["O", "O", "O"]}
+{"tokens": ["Tety", "pekly", "koláče."], "labels": ["O", "O", "O"]}
+{"tokens": ["Sousedky", "vařily", "večeři."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Děti", "si", "hrály", "na", "hřišti."], "labels": ["O", "O", "O", "O", "O"]}
+{"tokens": ["Tety", "pekly", "koláče."], "labels": ["O", "O", "O"]}
+{"tokens": ["Děti", "malovaly", "obrázky."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Děti", "si", "hráli", "na", "hřišti."], "labels": ["O", "O", "ERR", "O", "O"]}
+{"tokens": ["Sestra", "a", "bratr", "šli", "domů."], "labels": ["O", "O", "O", "O", "O"]}
+{"tokens": ["Oni", "byli", "včera", "pryč."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Holky", "utekly", "domu."], "labels": ["O", "O", "ERR"]}
+{"tokens": ["Holky", "četly", "knihu."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Děti", "běhaly", "po", "zahradě."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Děti", "pily", "čaj."], "labels": ["O", "O", "O"]}
+{"tokens": ["Dívky", "čistili", "stoly."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Bratři", "přinesli", "nákup."], "labels": ["O", "O", "O"]}
+{"tokens": ["Děti", "si", "hrály", "na", "hřišti."], "labels": ["O", "O", "O", "O", "O"]}
+{"tokens": ["Děti", "běhaly", "po", "zahradě."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Děti", "pili", "čaj."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Dívky", "čistily", "stoly."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Holky", "skákali", "přes", "švihadlo."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Rodiče", "napomínali", "děti."], "labels": ["O", "O", "O"]}
+{"tokens": ["Oni", "byly", "včera", "pryč."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Děti", "pily", "čaj."], "labels": ["O", "O", "O"]}
+{"tokens": ["Chlapci", "běhaly", "po", "parku."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Oni", "byly", "včera", "pryč."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Učitelé", "odešly", "z", "třídy."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Moje", "sestry", "byly", "unavené."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Holky", "utekly", "domu."], "labels": ["O", "O", "ERR"]}
+{"tokens": ["Včera", "sme", "byli", "v", "kině."], "labels": ["O", "ERR", "O", "O", "O"]}
+{"tokens": ["Bratři", "přinesli", "nákup."], "labels": ["O", "O", "O"]}
+{"tokens": ["Holky", "skákali", "přes", "švihadlo."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Bratři", "se", "vrátily", "domů."], "labels": ["O", "O", "ERR", "O"]}
+{"tokens": ["Bratři", "přinesly", "nákup."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Sestra", "a", "bratr", "šli", "domů."], "labels": ["O", "O", "O", "O", "O"]}
+{"tokens": ["Děti", "kreslili", "na", "tabuli."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Děti", "běhaly", "po", "zahradě."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Rodiče", "napomínali", "děti."], "labels": ["O", "O", "O"]}
+{"tokens": ["Děti", "běhaly", "po", "zahradě."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Děti", "pily", "čaj."], "labels": ["O", "O", "O"]}
+{"tokens": ["Děti", "si", "hráli", "na", "hřišti."], "labels": ["O", "O", "ERR", "O", "O"]}
+{"tokens": ["Rodiče", "napomínali", "děti."], "labels": ["O", "O", "O"]}
+{"tokens": ["Děti", "kreslili", "na", "tabuli."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Děti", "si", "hráli", "na", "hřišti."], "labels": ["O", "O", "ERR", "O", "O"]}
+{"tokens": ["Dívky", "zpívaly", "na", "jevišti."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Kluci", "šly", "na", "výlet."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Bratři", "se", "vrátily", "domů."], "labels": ["O", "O", "ERR", "O"]}
+{"tokens": ["Moje", "sestry", "byly", "unavené."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Děvčata", "šli", "do", "školy."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Děti", "běhaly", "po", "zahradě."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Bratři", "přinesly", "nákup."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Holky", "četli", "knihu."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Holky", "četli", "knihu."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Rodiče", "vychovávaly", "děti", "s", "láskou."], "labels": ["O", "ERR", "O", "O", "O"]}
+{"tokens": ["Dívky", "čistily", "stoly."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Děti", "kreslili", "na", "tabuli."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Sourozenci", "si", "hráli", "v", "pokoji."], "labels": ["O", "O", "ERR", "O", "O"]}
+{"tokens": ["Děti", "si", "hráli", "na", "hřišti."], "labels": ["O", "O", "ERR", "O", "O"]}
+{"tokens": ["Dívky", "zpívaly", "na", "jevišti."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Bratři", "přinesly", "nákup."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Kluci", "šly", "na", "výlet."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Bratři", "přinesli", "nákup."], "labels": ["O", "O", "O"]}
+{"tokens": ["Holky", "četli", "knihu."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Moje", "sestry", "byly", "unavené."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Děti", "běhaly", "po", "zahradě."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Sousedky", "vařili", "večeři."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Oni", "byli", "včera", "pryč."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Sestra", "a", "bratr", "šli", "domů."], "labels": ["O", "O", "O", "O", "O"]}
+{"tokens": ["Sestra", "a", "bratr", "šli", "domů."], "labels": ["O", "O", "O", "O", "O"]}
+{"tokens": ["Dívky", "spívali", "na", "jevišti."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Holky", "četli", "knihu."], "labels": ["O", "ERR", "O"]}
+{"tokens": ["Dívky", "zpívaly", "na", "jevišti."], "labels": ["O", "O", "O", "O"]}
+{"tokens": ["Děti", "kreslili", "na", "tabuli."], "labels": ["O", "ERR", "O", "O"]}
+{"tokens": ["Děti", "malovaly", "obrázky."], "labels": ["O", "ERR", "O"]}
