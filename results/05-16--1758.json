@@ -1,4 +1,6 @@
 {
+    "training_data_detector": "src/datasets/corrector_dataset_v1.jsonl",
+    "training_data_corrector": "",
     "dataset": "src/datasets/simple_eval_dataset.json",
     "number_of_sentences": 3,
     "number_of_errors": 2,

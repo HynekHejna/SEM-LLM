@@ -89,6 +89,8 @@ if __name__ == "__main__":
     
     # Uložení výsledků
     results = {
+        "training_data_detector": "doplnit...",
+        "training_data_corrector": "doplnit...",
         "dataset": DATASET_PATH,
         "number_of_sentences": total,
         "number_of_errors": POSSITIVE,
