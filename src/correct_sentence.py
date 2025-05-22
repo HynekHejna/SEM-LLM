@@ -19,8 +19,8 @@ def mask_and_correct(model, tokenizer, sentence, error_idx):
     original_word = sentence.split()[error_idx]
     masked_tokens = sentence.split().copy()
     tokenized = tokenizer(original_word, add_special_tokens=False)
-    num_subtokens = len(tokenized["input_ids"])
-    masked_tokens[error_idx] = " ".join(["[MASK]"] * num_subtokens)
+    num_subtokens = len(tokenized["input_ids"]) # počet subwordů
+    masked_tokens[error_idx] = " ".join(["[MASK]"] * num_subtokens) #přidání masky podle počtu subwordů
     masked_sentence = " ".join(masked_tokens)
 
     inputs = tokenizer(masked_sentence, return_tensors="pt")
@@ -30,7 +30,7 @@ def mask_and_correct(model, tokenizer, sentence, error_idx):
         outputs = model(**inputs)
     logits = outputs.logits
 
-    top_k = 5
+    top_k = 5 
     mask_preds = []
     for idx in mask_token_indices:
         top_tokens = torch.topk(logits[0, idx], k=top_k).indices.tolist()
@@ -39,17 +39,17 @@ def mask_and_correct(model, tokenizer, sentence, error_idx):
     # Vytvoření kombinací predikovaných tokenů
     candidates = list(product(*mask_preds))
     
-    candidate_words = []
+    candidate_words = [] #seznam slov pro opravu
     for combo in candidates:
-        decoded = tokenizer.decode(combo, skip_special_tokens=True).strip()
+        decoded = tokenizer.decode(combo, skip_special_tokens=True).strip() 
         candidate_words.append(decoded)
 
     print("Návrhy oprav:")
-    for word in candidate_words[:5]:  # omezíme výpis
+    for word in candidate_words[:5]:  # výpis prvních 5 návrhů
         print(f" - {word}")
 
     # První kandidát jako oprava
-    best_word = candidate_words[0] if candidate_words else "[NEZNÁMO]"
+    best_word = candidate_words[0] if candidate_words else "[NEZNÁMO]" 
     corrected_tokens = sentence.split()
     corrected_tokens[error_idx] = best_word
     corrected_sentence = " ".join(corrected_tokens)

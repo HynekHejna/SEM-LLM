@@ -52,16 +52,13 @@ if __name__ == "__main__":
         print(f"Správná chyba: {correct_mask}")
         print(f"Detekovaná chyba: {sentence.split()[error_idx] if error_idx is not None else None}")
 
-        if error_idx is None:
-            mistake = None
-        else:    
+        if error_idx is not None:
             mistake = sentence.split()[error_idx]
-                    #oprava chyby
-            if error_idx is not None:
-                fill, filled_sentence = mask_and_correct(corr_model, corr_tokenizer, sentence, error_idx)
-            else:
-                fill = correct_fill
-                filled_sentence = correct_sentece
+            fill, filled_sentence = mask_and_correct(corr_model, corr_tokenizer, sentence, error_idx)
+        else:    
+            mistake = None
+            fill = correct_fill
+            filled_sentence = correct_sentece
         #evaluace korektoru
         if fill == correct_fill and filled_sentence == correct_sentece:
             corr_score += 1

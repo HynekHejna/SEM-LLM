@@ -6,10 +6,10 @@
         "correct_sentence":"Kluci byli včera večer v kině"
     },
     {
-        "sentence":"Děti seděli na lavičce a pily čaj",
-        "correct_mask":"seděli",
-        "correct_fill":"seděly",
-        "correct_sentence":"Děti seděly na lavičce a pily čaj"
+        "sentence":"Michal jmenoval nového velktele.",
+        "correct_mask":"velktele",
+        "correct_fill":"velitele",
+        "correct_sentence":"Michal jmenoval nového velitele."
     },
     {
         "sentence":"Holky si hrály na hřišti",
