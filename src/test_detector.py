@@ -7,11 +7,9 @@ model = AutoModelForTokenClassification.from_pretrained("robe-error-detector")
 
 # Testovací věty
 test_sentences = [
-    "Toto je testovací věta s chybou.",
-    "Toto je další věta bez chiby.",
-    "Zde je daalší příklad věty s chybou.",
-    "Michal jmenoval nového velktele.",
-    "Vihořel včera dům v centru města.",
+    "kdo podle vás nese viku za neštěstí ve studénce",
+    "to co jsme zvsřejnili byl jen první odhad",
+    "přemýšleli jste už o odškodnění pro pozůstalé a zraněné"
 ]
 
 def detect_errors_in_sentence(sentence):

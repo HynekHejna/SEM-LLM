@@ -12,7 +12,7 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, Trainin
 import torch
 
 MODEL_NAME = "ufal/robeczech-base"
-DATA_PATH = "src/datasets/detector_dataset_v1.jsonl"
+DATA_PATH = "src/datasets/detector_dataset_v3.jsonl"
 #DATA_PATH = "src/datasets/token_classification_dataset.jsonl"
 LABEL_LIST = ["O", "ERR"]
 LABEL2ID = {label: i for i, label in enumerate(LABEL_LIST)} # mapování labelů na ID
@@ -54,11 +54,12 @@ tokenized_dataset = hf_dataset.map(tokenize_and_align)
 # Trénovací argumenty
 args = TrainingArguments(
     output_dir="./robe-error-detector",
-    per_device_train_batch_size=8,
+    per_device_train_batch_size=24,
     num_train_epochs=5,
-    save_steps=10,
-    logging_steps=5,
-    weight_decay=0.01
+    save_steps=1000,
+    logging_steps=300,
+    weight_decay=0.01,
+    fp16=True
 )
 
 trainer = Trainer(

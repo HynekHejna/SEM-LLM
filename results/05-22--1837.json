@@ -1,0 +1,15 @@
+{
+    "training_data_detector": "detectot_dataset_v2.jsonl počet vět: 9000",
+    "training_data_corrector": "corrector_dataset_v2.jsonl počet vět: 9000",
+    "dataset": "src/datasets/eval_dataset_v2.json",
+    "number_of_sentences": 1000,
+    "number_of_errors": 732,
+    "detector": {
+        "precision": 0.9733,
+        "recall": 0.8975,
+        "accuracy": 0.657
+    },
+    "corrector": {
+        "score": 0.378
+    }
+}

@@ -8,11 +8,11 @@ time = datetime.now().strftime("%m-%d--%H%M")
 # Cesty k modelům
 DETECTOR_PATH = "./robe-error-detector"
 CORRECTOR_PATH = "./robe-mask-corrector"
-DATASET_PATH = "src/datasets/simple_eval_dataset.json"
+DATASET_PATH = "src/datasets/eval_dataset_v2.json"
 EVAL_DATA_PATH = "./results/"+time+".json"
 
-POSSITIVE = 2
-NEGATIVE = 1
+POSSITIVE = 1530
+NEGATIVE = 470
 
 def load_data(path):
     with open(path, "r", encoding="utf-8") as f:
@@ -47,10 +47,10 @@ if __name__ == "__main__":
         #detekce chyby
         error_idx = tokenize_and_return_index(det_model, det_tokenizer, sentence)
 
-        print("==========================")
-        print(f"Věta: {sentence}")
-        print(f"Správná chyba: {correct_mask}")
-        print(f"Detekovaná chyba: {sentence.split()[error_idx] if error_idx is not None else None}")
+        # print("==========================")
+        # print(f"Věta: {sentence}")
+        # print(f"Správná chyba: {correct_mask}")
+        # print(f"Detekovaná chyba: {sentence.split()[error_idx] if error_idx is not None else None}")
 
         if error_idx is not None:
             mistake = sentence.split()[error_idx]
@@ -59,11 +59,16 @@ if __name__ == "__main__":
             mistake = None
             fill = correct_fill
             filled_sentence = correct_sentece
+
         #evaluace korektoru
         if fill == correct_fill and filled_sentence == correct_sentece:
             corr_score += 1
+        # else:
+        #     print("Návrh korektury:", repr(filled_sentence))
+        #     print("Správná korektura:", repr(correct_sentece))
 
-        #evaluace dektoru
+
+        #evaluace detektoru
         if mistake is None and correct_mask is None:
             det_TN += 1
         elif mistake == correct_mask:
@@ -73,11 +78,6 @@ if __name__ == "__main__":
         elif mistake != correct_mask:
             det_FP += 1
         
-        print("Opravená věta:")
-        print(filled_sentence)
-        print()
-    
-    
     # Výpočet metrik
     det_precision = det_TP / (det_TP + det_FP) if (det_TP + det_FP) > 0 else 0
     det_recall = det_TP / POSSITIVE
@@ -105,4 +105,3 @@ if __name__ == "__main__":
     }
 
     save_results(results, EVAL_DATA_PATH)
-           

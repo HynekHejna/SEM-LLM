@@ -11,7 +11,7 @@ from transformers import AutoTokenizer, AutoModelForMaskedLM, TrainingArguments,
 import torch
 
 MODEL_NAME = "ufal/robeczech-base"
-DATA_PATH = "src/datasets/mask_correction_dataset.jsonl"
+DATA_PATH = "src/datasets/corrector_dataset_v3.jsonl"
 
 # Načtení tokenizeru a modelu
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
@@ -26,8 +26,8 @@ examples = load_data(DATA_PATH)
 
 # Tokenizace a příprava dat
 def tokenize(example):
-    prompt = f"Věta: {example['masked_input']} Nápověda: {example['hint']}" # Definice promptu
-    tokenized = tokenizer(prompt, truncation=True, padding="max_length", max_length=64)
+    prompt = f"NÁPOVĚDA: {example['hint']}. VĚTA: {example['masked_input']}" # Definice promptu
+    tokenized = tokenizer(prompt, truncation=True, padding="max_length", max_length=128)
 
     # Nalezení pozice masky a správného slovo
     mask_index = tokenized.input_ids.index(tokenizer.mask_token_id)
@@ -49,11 +49,12 @@ tokenized_dataset = hf_dataset.map(tokenize)
 # Trénovací argumenty
 args = TrainingArguments(
     output_dir="./robe-mask-corrector",
-    per_device_train_batch_size=8,
+    per_device_train_batch_size=24,
     num_train_epochs=5,
-    save_steps=10,
-    logging_steps=5,
-    weight_decay=0.01
+    save_steps=1000,
+    logging_steps=300,
+    weight_decay=0.01,
+    fp16=True
 )
 
 trainer = Trainer(

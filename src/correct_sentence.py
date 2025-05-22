@@ -15,45 +15,49 @@ def tokenize_and_return_index(model, tokenizer, sentence):
     return error_idx
 
 def mask_and_correct(model, tokenizer, sentence, error_idx):
-    #příprava věty pro korekturu
-    original_word = sentence.split()[error_idx]
-    masked_tokens = sentence.split().copy()
-    tokenized = tokenizer(original_word, add_special_tokens=False)
-    num_subtokens = len(tokenized["input_ids"]) # počet subwordů
-    masked_tokens[error_idx] = " ".join(["[MASK]"] * num_subtokens) #přidání masky podle počtu subwordů
-    masked_sentence = " ".join(masked_tokens)
+    words = sentence.split()
+    original_word = words[error_idx]
 
+    # Tokenizace slova na subwordy
+    tokenized_word = tokenizer(original_word, add_special_tokens=False)
+    num_subtokens = len(tokenized_word.input_ids)
+
+    # Maskování podle počtu subwordů
+    masked_words = words.copy()
+    masked_words[error_idx] = " ".join(["[MASK]"] * num_subtokens)
+    masked_sentence = " ".join(masked_words)
+
+    # Tokenizace celé věty s maskou
     inputs = tokenizer(masked_sentence, return_tensors="pt")
-    mask_token_indices = (inputs.input_ids == tokenizer.mask_token_id).nonzero(as_tuple=True)[1]
+    input_ids = inputs.input_ids
+
+    # Najdi indexy masek
+    mask_token_id = tokenizer.mask_token_id
+    mask_token_indices = (input_ids[0] == mask_token_id).nonzero(as_tuple=True)[0]
 
     with torch.no_grad():
         outputs = model(**inputs)
     logits = outputs.logits
 
-    top_k = 5 
-    mask_preds = []
-    for idx in mask_token_indices:
-        top_tokens = torch.topk(logits[0, idx], k=top_k).indices.tolist()
-        mask_preds.append(top_tokens)
+    # Top predikce pro každou masku
+    top_k = 5
+    mask_preds = [
+        torch.topk(logits[0, idx], k=top_k).indices.tolist()
+        for idx in mask_token_indices
+    ]
 
-    # Vytvoření kombinací predikovaných tokenů
+    # Kombinace predikovaných tokenů
     candidates = list(product(*mask_preds))
-    
-    candidate_words = [] #seznam slov pro opravu
-    for combo in candidates:
-        decoded = tokenizer.decode(combo, skip_special_tokens=True).strip() 
+
+    candidate_words = []
+    for token_ids in candidates:
+        decoded = tokenizer.decode(token_ids, skip_special_tokens=True).replace(" ", "")
         candidate_words.append(decoded)
 
-    print("Návrhy oprav:")
-    for word in candidate_words[:5]:  # výpis prvních 5 návrhů
-        print(f" - {word}")
-
-    # První kandidát jako oprava
-    best_word = candidate_words[0] if candidate_words else "[NEZNÁMO]" 
-    corrected_tokens = sentence.split()
-    corrected_tokens[error_idx] = best_word
-    corrected_sentence = " ".join(corrected_tokens)
-
-
+    # Výběr nejlepšího (první)
+    best_word = candidate_words[0] if candidate_words else "[NEZNÁMO]"
+    corrected_words = words.copy()
+    corrected_words[error_idx] = best_word
+    corrected_sentence = " ".join(corrected_words)
 
     return best_word, corrected_sentence
