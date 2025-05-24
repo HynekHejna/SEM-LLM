@@ -6,8 +6,8 @@ from datetime import datetime
 
 time = datetime.now().strftime("%m-%d--%H%M")
 # Cesty k modelům
-DETECTOR_PATH = "./robe-error-detector"
-CORRECTOR_PATH = "./robe-mask-corrector"
+DETECTOR_PATH = "Hahacko03/robe-error-detector"
+CORRECTOR_PATH = "Hahacko03/robe-mask-corrector"
 DATASET_PATH = "src/datasets/eval_dataset_v1.json"
 EVAL_DATA_PATH = "./results/"+time+".json"
 
