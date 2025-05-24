@@ -5,7 +5,7 @@ import string
 MISTAKE_PROB = 0.75
 MIN_LENGHT = 3
 MAX_LENGHT = 10
-NUMBER_OF_SENTENCES = 20000
+NUMBER_OF_SENTENCES = 1000
 
 def encode_text(file_path):
     """

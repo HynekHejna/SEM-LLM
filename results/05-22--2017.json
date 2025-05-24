@@ -1,7 +1,7 @@
 {
-    "training_data_detector": "doplnit...",
-    "training_data_corrector": "doplnit...",
-    "dataset": "src/datasets/eval_dataset_v2.json",
+    "training_data_detector":"detectot_dataset_v2.jsonl počet vět: 9000",
+    "training_data_corrector": "corrector_dataset_v2.jsonl počet vět: 9000",
+    "dataset": "src/datasets/eval_dataset_2.json",
     "number_of_sentences": 2000,
     "number_of_errors": 1530,
     "detector": {

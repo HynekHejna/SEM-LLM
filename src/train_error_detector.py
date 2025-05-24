@@ -12,7 +12,7 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, Trainin
 import torch
 
 MODEL_NAME = "ufal/robeczech-base"
-DATA_PATH = "src/datasets/detector_dataset_v3.jsonl"
+DATA_PATH = "src/datasets/detector_dataset_v1.jsonl"
 #DATA_PATH = "src/datasets/token_classification_dataset.jsonl"
 LABEL_LIST = ["O", "ERR"]
 LABEL2ID = {label: i for i, label in enumerate(LABEL_LIST)} # mapování labelů na ID

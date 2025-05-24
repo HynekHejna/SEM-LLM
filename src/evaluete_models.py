@@ -8,11 +8,11 @@ time = datetime.now().strftime("%m-%d--%H%M")
 # Cesty k modelům
 DETECTOR_PATH = "./robe-error-detector"
 CORRECTOR_PATH = "./robe-mask-corrector"
-DATASET_PATH = "src/datasets/eval_dataset_v2.json"
+DATASET_PATH = "src/datasets/eval_dataset_v1.json"
 EVAL_DATA_PATH = "./results/"+time+".json"
 
-POSSITIVE = 1530
-NEGATIVE = 470
+POSSITIVE = 74
+NEGATIVE = 26
 
 def load_data(path):
     with open(path, "r", encoding="utf-8") as f:

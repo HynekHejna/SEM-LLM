@@ -11,7 +11,7 @@ from transformers import AutoTokenizer, AutoModelForMaskedLM, TrainingArguments,
 import torch
 
 MODEL_NAME = "ufal/robeczech-base"
-DATA_PATH = "src/datasets/corrector_dataset_v3.jsonl"
+DATA_PATH = "src/datasets/corrector_dataset_v1.jsonl"
 
 # Načtení tokenizeru a modelu
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
